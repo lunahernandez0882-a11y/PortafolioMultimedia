@@ -7,11 +7,11 @@ En esta primera actividad se exploran los conceptos fundamentales de los sistema
 * **Elementos Clave**
 * **Aplicaciones Modernas** 
 * **Ejemplos Reales**
-* 
+  
 ## 🛠️ Herramientas Utilizadas
 
 * **Diseño Visual:** [Canva](https://canva.com)
-* 
+  
 ## 📚 Fuentes de Información (Bibliografía APA)
 
 * Enciclopedia Significados. (2025). *Multimedia: qué es, características, elementos y para qué sirve*. Recuperado de https://www.significados.com/multimedia/
