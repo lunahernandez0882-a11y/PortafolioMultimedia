@@ -1,0 +1,232 @@
+/* =========================================================
+   Paleta de colores
+   ---------------------------------------------------------
+   --rojo-tomate     #E8503A  botón principal / anillo de progreso
+   --rojo-oscuro     #C43D2B  hover / sombra
+   --verde-hoja      #6FA84B  acento "descanso"
+   --verde-hoja-osc  #4F7A36  hover del acento verde
+   --cafe-tallo      #8B5A2B  botón secundario (reiniciar)
+   --negro-detalle   #2B2B2B  texto principal
+   --crema-fondo     #FDEEE7  color de respaldo si aún no pones tu imagen
+   --blanco          #FFFFFF  tarjetas / iconos
+   ========================================================= */
+
+:root {
+  --rojo-tomate: #E8503A;
+  --rojo-oscuro: #C43D2B;
+  --verde-hoja: #6FA84B;
+  --verde-hoja-osc: #4F7A36;
+  --cafe-tallo: #8B5A2B;
+  --negro-detalle: #2B2B2B;
+  --crema-fondo: #FDEEE7;
+  --blanco: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1e2da;
+  font-family: 'Nunito', sans-serif;
+}
+
+.phone {
+  position: relative;
+  width: 320px;
+  min-height: 650px;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(43, 43, 43, 0.18);
+}
+
+.bg-image {
+  position: absolute;
+  inset: 0;
+  background-color: var(--crema-fondo);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  min-height: 650px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app-header {
+  text-align: center;
+}
+
+.app-header h1 {
+  font-family: 'Baloo 2', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: var(--rojo-tomate);
+  text-shadow: 0 2px 6px rgba(255, 255, 255, 0.6);
+}
+
+.mode-label {
+  display: inline-block;
+  margin-top: 8px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--blanco);
+  background: var(--rojo-tomate);
+  padding: 4px 14px;
+  border-radius: 999px;
+}
+
+.mode-label.descanso {
+  background: var(--verde-hoja);
+}
+.atras {
+  align-self: flex-start;
+  color: var(--cafe-tallo);
+  text-decoration: none;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.75);
+  transition: 0.2s ease;
+}
+
+.atras:hover {
+  color: var(--blanco);
+  background: var(--cafe-tallo);
+}
+
+.hojas {
+  position: absolute;
+  top: 5px;
+  font-size: 25px;
+  z-index: 2;
+}
+.timer-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 24px 0;
+}
+
+.progress-ring {
+  width: 240px;
+  height: 240px;
+  transform: rotate(-90deg);
+}
+
+.ring-track {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.55);
+  stroke-width: 14;
+}
+
+.ring-progress {
+  fill: none;
+  stroke: var(--rojo-tomate);
+  stroke-width: 14;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.3s linear, stroke 0.3s ease;
+}
+
+.ring-progress.descanso {
+  stroke: var(--verde-hoja);
+}
+
+.timer-center {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.time-display {
+  font-family: 'Baloo 2', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--negro-detalle);
+  background: rgba(255, 255, 255, 0.75);
+  padding: 2px 16px;
+  border-radius: 14px;
+}
+
+.play-btn {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  border: none;
+  background: var(--rojo-tomate);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(232, 80, 58, 0.45);
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.play-btn:hover {
+  background: var(--rojo-oscuro);
+}
+
+.play-btn:active {
+  transform: scale(0.94);
+}
+
+.play-btn:focus-visible {
+  outline: 3px solid var(--verde-hoja);
+  outline-offset: 3px;
+}
+
+/* Controles inferiores */
+.controls {
+  display: flex;
+  gap: 14px;
+  padding-bottom: 8px;
+}
+
+.control-btn {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--negro-detalle);
+  background: rgba(255, 255, 255, 0.85);
+  border: 2px solid var(--cafe-tallo);
+  border-radius: 999px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.control-btn:hover {
+  background: var(--cafe-tallo);
+  color: var(--blanco);
+}
+
+.control-btn:active {
+  transform: scale(0.96);
+}
+
+#skipBtn {
+  border-color: var(--verde-hoja-osc);
+}
+
+#skipBtn:hover {
+  background: var(--verde-hoja-osc);
+}

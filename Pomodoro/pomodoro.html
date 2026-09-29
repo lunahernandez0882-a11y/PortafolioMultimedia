@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro App · Interfaz</title>
+
+  <!-- Tipografías: Baloo 2 (títulos, look amigable/redondeado) y Nunito (texto y botones) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="phone">
+
+    <div class="bg-image"></div>
+
+    <div class="content">
+     <a href="index.html" class="atras">Atras</a>
+        
+      <header class="app-header">
+        <h1>Pomodoro</h1>
+        <p class="mode-label" id="modeLabel">Enfoque</p>
+      </header>
+
+      <section class="timer-wrap">
+        <div class="hojas">(っ'-')╮=͟͟͞🍅)`-' )</div>
+
+       <svg class="progress-ring" viewBox="0 0 220 220">
+
+  <circle class="ring-track" cx="110" cy="110" r="90"/>
+  <circle class="ring-progress" id="ringProgress" cx="110" cy="110" r="90"/>
+
+
+</svg>
+        <div class="timer-center">
+          <span class="time-display" id="timeDisplay">25:00</span>
+          <button id="playBtn" class="play-btn" aria-label="Iniciar pomodoro" aria-pressed="false">
+            <svg id="playIcon" viewBox="0 0 24 24" width="30" height="30" aria-hidden="true">
+              <path d="M8 5v14l11-7z" fill="#FFFFFF"/>
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <footer class="controls">
+        <button id="resetBtn" class="control-btn">Reiniciar</button>
+        <button id="skipBtn" class="control-btn">Saltar</button>
+      </footer>
+
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
