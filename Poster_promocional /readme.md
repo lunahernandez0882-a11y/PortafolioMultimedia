@@ -2,17 +2,7 @@
 
 Este repositorio contiene el proceso de análisis, propuesta de rediseño y entrega final del póster publicitario para la convocatoria de voluntariado de **ALIS**. El proyecto migró de un boceto inicial con problemas de composición a una pieza publicitaria funcional bajo el estilo *Y2K / Collage Scrapbook*, manteniendo la esencia e identidad tierno-juvenil de la marca.
 
----
 
-## 📌 Vista Previa del Proyecto
-
-| Póster Final | Elementos Tipográficos |
-| :---: | :---: |
-| ![Póster Final ALIS](./Cartel%20Bazar%20Moda%20Vintage%20Rosa.png) | ![Tipografías](./image_9e5069.png) |
-
----
-
-## 📐 Especificaciones Técnicas
 
 ### 🎨 Paleta de Colores
 * **Rosa Magenta / Neón (Principal):** `HEX #E5007D` | `CMYK (12, 100, 24, 0)`
